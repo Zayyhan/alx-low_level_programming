@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 /**
-* main - print the string in the printf function
+* main - using the string in the printf function
 *
-* Description: using the main function 
-* this program prints "Programming is like building a multilingual puzzle
-* followed by a new line 
+* Description: using the main function
+* this program prints, with proper grammar, but the outcome is a piece of art,
 * Return: Always 0 (Success)
 */
 int main(void)
 {
-	printf("Programming is like building a multilingual puzzle,\n");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
