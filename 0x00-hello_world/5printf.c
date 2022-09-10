@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * program prints string set by printf
- * return 0
- */
+* main - print the string in the printf function
+*
+* Description: using the main function 
+* this program prints "Programming is like building a multilingual puzzle
+* followed by a new line 
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return(0);
+	printf("Programming is like building a multilingual puzzle,\n");
+	return (0);
 }
