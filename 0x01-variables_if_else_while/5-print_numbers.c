@@ -7,13 +7,10 @@
 */
 int main(void)
 {
-int num;
+char num = '0';
 
-for (num = 0; num < 10; num++)
-{
-printf("%d", num);
+for (num = '0'; num <= '9'; num++)
+putchar(num);
 
-printf('\n');
-}
 return (0);
 }
