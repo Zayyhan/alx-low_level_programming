@@ -15,5 +15,7 @@ putchar(num);
 for (alphabet = 'a'; alphabet <= 'f'; alphabet++)
 putchar(alphabet);
 
+putchar('\n');
+
 return (0);
 }
