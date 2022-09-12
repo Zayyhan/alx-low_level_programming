@@ -9,7 +9,7 @@ int main(void)
 {
 char tebahpla;
 
-for (tebahpla = 'z'; tebahpla >= 'a';)
+for (tebahpla = 'z'; tebahpla >= 'a'; tebahpla--)
 putchar(tebahpla);
 
 putchar('\n');
