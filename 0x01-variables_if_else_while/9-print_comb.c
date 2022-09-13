@@ -7,16 +7,16 @@
 */
 int main(void)
 {
-int num;
+int d1, d2, n = 0;
 
-for (num = '0'; num <= '9'; num++)
-if (num > '0')
+for (d1 = '0'; d1 <= '9'; d1++)
+for (d2 = d1 + 1; d2 <= '9'; d2++, n++)
+if (n > 0)
 putchar(',');
 putchar(' ');
 
-putchar(num);
-
-putchar('\n');
+putchar(d1);
+putchar(d2);
 
 return (0);
 }
