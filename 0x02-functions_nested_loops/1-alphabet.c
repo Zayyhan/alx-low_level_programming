@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* print_alphabet - Entry point
+* print_alphabet - function to print abc
 *
-* Return: Always 0 (Success)
+* No Return value
 */
 void print_alphabet(void);
 {
@@ -13,5 +13,5 @@ void print_alphabet(void);
 	{
 		_putchar(c);
 	}
-	_putchar('\n');
+_putchar('\n');
 }
