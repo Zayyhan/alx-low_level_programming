@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+* print_diagonal - prints diagonal line on the terminal
+*
+* @n: int used for parameter of the function
+* Return: void
+*/
+
+void print_diagonal(int n)
+{
+while (n-- > 0)
+{
+_putchar('\');
+}
+_putchar('\n');
+
+return;
+}
