@@ -3,23 +3,22 @@
 /**
 * print_square - prints a square
 *
-* @size: used as the parameter of the function
+* @size: int used for parameter of the function
 * Return: void
 */
 
 void print_square(int size)
 {
-int inc1, inc2;
+int a, b;
 
 if (size > 0)
 {
-for (inc1 = 0; inc1 <= size; inc1++)
+for (a = 0; a < size; a++)
 {
-for (inc2 = 0; inc2 <= (size - 1); inc2++)
+for (b = 0; b < size; b++)
 {
 _putchar('#');
 }
-_putchar('#');
 _putchar('\n');
 }
 }
