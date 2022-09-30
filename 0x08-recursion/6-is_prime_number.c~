@@ -1,0 +1,33 @@
+#include "main.h"
+
+/**
+* primeTest - test is a num is a prime num
+*
+* @x: number to check
+* @y: additional int
+* Return: prime number ot not
+*/
+
+int primeTest(int x, int y)
+{
+	if (x <= 1 || x % y == 0)
+	return (0);
+
+	else if (x == y)
+		return (1);
+
+	else if (x > y)
+		primeTest(x, y + 1);
+}
+/**
+* is_prime_number - checks if an integer is a prime number
+*
+* @n: number to check
+* Return: 1 if the input integer is a prime number,
+* otherwise return 0
+*/
+
+int is_prime_number(int n)
+{
+	return (primeTest(n, 2));
+}
