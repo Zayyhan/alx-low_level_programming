@@ -25,16 +25,16 @@ char *str_concat(char *s1, char *s2)
 	for (index = 0; s1[index] || s2[index]; index++)
 		length++;
 
-	s3 = malloc(sizeof(char) * length);
+	s3 = malloc(sizeof(char) * length + 1);
 
 	if (s3 == NULL)
 		return (NULL);
 
 	for (index = 0; s1[index]; index++)
-		s3[c_index] = s1[index];
+		s3[c_index++] = s1[index];
 
 	for (index = 0; s2[index]; index++)
-		s3[c_index] = s2[index];
+		s3[c_index++] = s2[index];
 
 	return (s3);
 }
