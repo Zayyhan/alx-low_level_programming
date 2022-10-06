@@ -6,6 +6,7 @@
  *
  * @s1: first string
  * @s2: second string to add to @s1
+ * @n: number of bytes of @s2
  * Return: pointer to newly allocated memory,
  * which contains s1, followed by the first n bytes of s2
  * and null terminated
