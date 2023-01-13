@@ -11,7 +11,7 @@
  * Return: (1) success, (0) failure
  */
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int key_i = 0;
 	char *val_copy = NULL, *key_copy = NULL;
@@ -32,3 +32,36 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 	}
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
+	{
+		free(key_copy);
+		free(val_copy);
+		return (0);
+	}
+	new_node->key = key_copy;
+	new_node->value = val_copy;
+	new_node->next = NULL;
+	key_i = key_index((unsigned char *)key, ht->size);
+	/* COLLISION OCCURED */
+	if ((ht->array)[key_i] != NULL)
+	{
+		temp_node = (ht->array)[key_i];
+		while(temp_node)
+		{
+			if (strcmp(temp_node->key, key_copy) == 0)
+			{
+				free(ht->array[key_i]->value);
+				ht->array[key_i]->value = val_copy;
+				free(key_copy);
+				free(new_node);
+				return (1);
+			}
+			temp_node = temp_node->next;
+		}
+		temp_node = (ht->array)[key_i];
+		new_node->next = temp_node;
+		(ht->array)[key_i] = new_node;
+	}
+	else
+		(ht->array)[key_i] = new_node;
+	return (1);
+}
